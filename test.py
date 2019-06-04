@@ -15,7 +15,6 @@ try:
         choice = input("Is code in PEP8 standard...? [y/n]")
         if choice == 'n' or 'N':
             os.system("autopep8 -i terminalAssist/*/*.py")
-
         print("Code is checked")
 except Exception as e:
     print(e)

@@ -1,11 +1,13 @@
 import speedtest
 import colorama
+from packages import spinner
 
 
 def test_speed():
-    res = 0 
+    res = 0
     res = speedtest.Speedtest()
     res.get_best_server()
+    spinner.spin()
     download = res.download()
     upload = res.upload()
     print("="*25)

@@ -1,5 +1,6 @@
 import os
 import json
+import plugins.speedtest as speed
 
 if __name__ == "__main__":
     data = {}
@@ -13,4 +14,4 @@ if __name__ == "__main__":
             json.dump(data, fo)
 
     if os.path.isfile(".user_details.json"):
-        pass
+        speed.test_speed()
