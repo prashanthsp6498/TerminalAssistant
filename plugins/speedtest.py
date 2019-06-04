@@ -24,6 +24,3 @@ def human_readable(speed):
         speed /= 1000
         i += 1
     return speed, i
-
-
-test_speed()
