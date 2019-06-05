@@ -24,4 +24,4 @@ def send_mail():
             print(colorama.Fore.RED, "Hey type correct password\n Or \n"+e,
                   colorama.Fore.WHITE)
     except Exception:
-        print("\nbye ")
+        print("\nSomething went wrong ")
