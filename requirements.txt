@@ -2,12 +2,15 @@ autopep8==1.4.4
 certifi==2019.3.9
 colorama==0.4.1
 daterangestr==0.0.3
-flake8==3.7.7 
+entrypoints==0.3
+flake8==3.7.7
 IMDbPY==6.7
 lxml==4.3.3
+mccabe==0.6.1
 openweather==0.11
 pipenv==2018.11.26
 pycodestyle==2.5.0
+pyflakes==2.1.1
 speedtest-cli==2.1.1
 SQLAlchemy==1.3.4
 virtualenv==16.6.0
