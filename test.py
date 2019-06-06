@@ -22,5 +22,4 @@ try:
         print("unknown option: "+str(sys.argv[1]))
         print("usage: assist [--help] [--auto] [--run]")    
 except Exception:
-    #print(e)
-    print("usage: assist [--help] [--auto] [--run]")
+    print("usage: ./test.py [--help] [--auto] [--run]")
