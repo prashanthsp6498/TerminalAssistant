@@ -11,7 +11,8 @@ def breaking_news():
     try:
         response = requests.get(url, headers=headers)
     except requests.exceptions.RequestException as e:
-        print(colorama.Fore.RED, 'Connection error, Please check your internet connection', colorama.Fore.RESET)
+        print(colorama.Fore.RED,
+              'Connection error, Please check your internet connection', colorama.Fore.RESET)
         return
     news = response.json()['Data']
     count = 1

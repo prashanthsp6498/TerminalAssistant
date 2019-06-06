@@ -18,3 +18,4 @@ with open("assist", "w") as fo:
     fo.write("python3 "+pwd+"/terminalAssist/")
 os.system("sudo cp assist /usr/local/bin/")
 os.system("sudo chmod 777 /usr/local/bin/assist")
+os.system("rm assist")
