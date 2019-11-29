@@ -14,4 +14,4 @@ if __name__ == "__main__":
             json.dump(data, fo)
     '''
     if os.path.isfile(".user_details.json"):
-        speed.test_speed()
+        speed.test_speed()`

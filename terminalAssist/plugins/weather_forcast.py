@@ -1,22 +1,53 @@
 import requests
 import colorama
 import json
+import random
+from datetime import date
 
 
-def weather_forcast():
-    #url = 'https://community-open-weather-map.p.rapidapi.com/weather'
-    url='https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=%22metric%22+or+%22imperial%22&mode=xml%2C+html&q=Delhi%2Cin'
-    headers = {
-        "X-RapidAPI-Host": "community-open-weather-map.p.rapidapi.com",
-        "X-RapidAPI-Key": "bec0ac22dbmshaa67ef6ae8d3009p1734b7jsn5e7b105167d1"
-    }
+today = date.today()
+now_today=str(today)
+res=now_today.split('-')
+
+
+def get_woeid(query):
+    url = 'https://www.metaweather.com/api/location/search/?query='+query
+    #print(url)
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url)
     except requests.exceptions.RequestException as e:
         print(colorama.Fore.RED,
               'Connection error, Please check your internet connection', colorama.Fore.RESET)
         return
-    #print(response)
-    weather=json.loads(response)
-    print(weather)
+    
+    data = response.json()
+    woeid=data[0]['woeid']
+    return woeid
+
+
+def get_weather(woeid):
+    url='https://www.metaweather.com/api/location/'+str(woeid)+'/'+str(res[0])+'/'+str(res[1])+'/'+str(res[2])+'/'
+    #print(url)
+    try:
+        response = requests.get(url)
+    except requests.exceptions.RequestException as e:
+        print(colorama.Fore.RED,
+              'Connection error, Please check your internet connection', colorama.Fore.RESET)
+        return
+    
+    data = response.json()
+    name=data[0]['weather_state_name']
+    min_temp=data[0]['min_temp']
+    max_temp=data[0]['max_temp']
+
+    return name,min_temp,max_temp
+
+
+city_name = input("Enter the City Name :  ")
+woeid=get_woeid('london')
+temp_name,min_temp,max_temp=get_weather(woeid)
+
+print(temp_name)
+print("MINIMUM TEMPARATURE"+str(min_temp))
+print("MAXIMUM TEMPARATURE"+str(max_temp))
 
