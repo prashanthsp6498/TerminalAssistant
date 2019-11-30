@@ -3,15 +3,29 @@ import colorama
 import json
 import random
 from datetime import date
+import os
+import sys
 
+
+package_path=os.path.abspath("packages/map.py")
+path_list=package_path.split('/')
+path="/".join(path_list[:6])
+
+sys.path.insert(0,path)
+from packages import map
+
+location=map.fetch_location()
+map.current_location()
+latt=location['latitude']
+long=location['longitude']
 
 today = date.today()
 now_today=str(today)
 res=now_today.split('-')
 
 
-def get_woeid(query):
-    url = 'https://www.metaweather.com/api/location/search/?query='+query
+def get_woeid():
+    url = 'https://www.metaweather.com/api/location/search/?lattlong='+str(latt)+','+str(long)+''
     #print(url)
     try:
         response = requests.get(url)
@@ -43,8 +57,7 @@ def get_weather(woeid):
     return name,min_temp,max_temp
 
 
-city_name = input("Enter the City Name :  ")
-woeid=get_woeid('london')
+woeid=get_woeid()
 temp_name,min_temp,max_temp=get_weather(woeid)
 
 print(temp_name)
