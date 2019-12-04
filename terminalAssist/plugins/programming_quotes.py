@@ -1,5 +1,4 @@
-# Random Cat Fact Generator
-
+# Random Programmng Quotes
 
 import requests
 import colorama
@@ -7,21 +6,23 @@ import json
 import random
 
 
-def fact():
-    url = 'https://cat-fact.herokuapp.com/facts'
+def quotes():
+    url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en'
 
     try:
         response = requests.get(url)
-        # print(response)
     except requests.exceptions.RequestException as e:
         print(colorama.Fore.RED,
               'Connection error, Please check your internet connection', colorama.Fore.RESET)
         return
 
-    text_list = []
     data = response.json()
-    for item in data['all']:
-        # print(item['text'])
-        text_list.append(item['text'])
 
-    print(random.choice(text_list))
+    quotes_dict={}
+
+    for i in range(len(data)):
+        quotes_dict[data[i]['author']] = data[i]['en']
+    
+    author,quote=random.choice(list(quotes_dict.items()))
+
+    print(quote+'\n- '+ author)

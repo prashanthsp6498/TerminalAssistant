@@ -4,19 +4,21 @@ import colorama
 import json
 import random
 
+
 def joke():
-    genre=['nsfw','religious','political']
-    url = 'https://sv443.net/jokeapi/category/Programming?blacklistFlags='+random.choice(genre)
+    genre = ['nsfw', 'religious', 'political']
+    url = 'https://sv443.net/jokeapi/category/Programming?blacklistFlags=' + \
+        random.choice(genre)
     try:
         response = requests.get(url)
     except requests.exceptions.RequestException as e:
         print(colorama.Fore.RED,
               'Connection error, Please check your internet connection', colorama.Fore.RESET)
         return
-    
-    text_list=[]
+
+    text_list = []
     data = response.json()
-    #print(data.keys())
+    # print(data.keys())
 
     print("------JOKE------\n\n")
     if('joke' in data.keys()):
@@ -26,5 +28,3 @@ def joke():
         print()
         print()
         print(data['delivery'])
-
-
