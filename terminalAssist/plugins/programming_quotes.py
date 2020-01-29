@@ -18,11 +18,11 @@ def quotes():
 
     data = response.json()
 
-    quotes_dict={}
+    quotes_dict = {}
 
     for i in range(len(data)):
         quotes_dict[data[i]['author']] = data[i]['en']
-    
-    author,quote=random.choice(list(quotes_dict.items()))
 
-    print(quote+'\n- '+ author)
+    author, quote = random.choice(list(quotes_dict.items()))
+
+    print(quote+'\n- ' + author)
