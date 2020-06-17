@@ -1,5 +1,8 @@
 <h1 align="center">ASSIST</h1>
+
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
+
+
 <h3 align="center">A handy tool for Developers to stay up todate with the world!</h3>
 
 ## Setup
