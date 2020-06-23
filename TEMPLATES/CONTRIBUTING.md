@@ -11,7 +11,7 @@ There are many ways to contribute, from writing tutorials or blog posts, improvi
 The process of setting up Assist for development isn't different. To activate virtual environment mode, just run
 
 ```
-$ source assistant/bin/activate
+$ source venv/bin/activate
 ```
 
 ## Branching Guide
