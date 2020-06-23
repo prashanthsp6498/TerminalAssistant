@@ -1,8 +1,5 @@
 <h1 align="center">ASSIST</h1>
-
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
-
-
 <h3 align="center">A handy tool for Developers to stay up todate with the world!</h3>
 
 ## Setup
@@ -21,13 +18,13 @@ The main purpose of this repository is to continue to evolve the Assist , making
 
   
 
-### [Code Of Conduct](/ISSUE_TEMPLATE/CODE_OF_CONDUCT.md)
+### [Code Of Conduct](/TEMPLATES/CODE_OF_CONDUCT.md)
 
  
 
 All participants are expected to adhere to the Code of Conduct.
 
-### [Contributing Guidelines](/ISSUE_TEMPLATE/CONTRIBUTING.md)
+### [Contributing Guidelines](/TEMPLATES/CONTRIBUTING.md)
 
 Read our contributing guide to learn about what contributions we are looking for and how to propose them.
 
@@ -40,4 +37,4 @@ Assist officially partners with the following companies, and thanks them for the
 For any queries regarding partnerships, reach out to [AssistHQ](mailto:).
 ## License
 
-The Assist core project is [MIT licensed](/ISSUE_TEMPLATE/LICENSE).
+The Assist core project is [MIT licensed](/TEMPLATES/LICENSE).
