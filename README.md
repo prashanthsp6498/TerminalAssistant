@@ -12,7 +12,7 @@ Assist is an MIT licenced Open Source Python Package built specifically for Linu
 ## Setup :
 
 The project is still under development so hang on for a while until v0.0.1 is released :)  
-If you are interested in contributing to the project then visit [Contribution.md](/TEMPLATES/CONTRIBUTING.md) for further information.
+If you are interested in contributing to the project then visit [CONTRIBUTING.md](/TEMPLATES/CONTRIBUTING.md) for further information.
 
 ## Contributing
 
