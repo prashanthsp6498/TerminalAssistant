@@ -3,6 +3,7 @@
 <h3 align="center">A handy tool for Developers to stay up todate with the world!</h3>
 
 ![enter image description here](https://img.shields.io/badge/Contrbutors-Welcome-brightgreen)
+![](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Introduction :
 
