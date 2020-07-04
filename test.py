@@ -10,13 +10,13 @@ try:
         print('--run\tTo check standard')
     
     elif sys.argv[1] == '--auto':
-        os.system("autopep8 -i terminalAssist/")
+        os.system("autopep8 -i assistant/")
 
     elif sys.argv[1] == '--run':
-        os.system("flake8 --max-line-length=90 terminalAssist/")
+        os.system("flake8 --max-line-length=90 assistant/")
         choice = input("Is code in PEP8 standard...? [y/n]")
         if choice == 'n' or 'N':
-            os.system("autopep8 -i terminalAssist/*/*.py")
+            os.system("autopep8 -i assistant/*/*.py")
         print("Code is Checked")
     else:
         print("unknown option: "+str(sys.argv[1]))

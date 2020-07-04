@@ -14,8 +14,8 @@ if os.path.isfile("assist"):
     os.system("rm assist")
 pwd = os.getcwd()
 with open("assist", "w") as fo:
-    fo.write("source "+pwd+"/assistant/bin/activate\n")
-    fo.write("python3 "+pwd+"/terminalAssist/")
+    fo.write("source "+pwd+"/venv/bin/activate\n")
+    fo.write("python3 "+pwd+"/assistant/")
 os.system("sudo cp assist /usr/local/bin/")
-os.system("sudo chmod 777 /usr/local/bin/assist")
+os.system("sudo chmod +x /usr/local/bin/assist")
 os.system("rm assist")

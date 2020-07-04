@@ -5,6 +5,3 @@
 # bitcoin_price.price()
 
 from plugins import speedtest
-
-
-
