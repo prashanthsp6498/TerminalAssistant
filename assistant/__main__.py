@@ -30,11 +30,11 @@ def validate_city(city):
 		location = geolocator.geocode(city)
 		choice=input("\n Is your city Address "+str(location.address)+" (Yy/Nn) :  ")
 		if(choice == 'y' or choice == 'Y'):
-			city_lst =[]
-			city_lst.append(location.address)
-			city_lst.append(location.latitude)
-			city_lst.append(location.longitude)
-			data['city']=city_lst
+			city_dict ={}
+			city_dict['address']=location.address
+			city_dict['latitude']=location.latitude
+			city_dict['longitude']=location.longitude
+			data['city']=city_dict
 
 		elif(choice == 'N' or choice == 'n'):
 			print("please enter correct city name")
@@ -45,7 +45,7 @@ def validate_city(city):
 if __name__ == "__main__":
 
 	data = {}
-	if not os.path.isfile("user_details.json"):
+	if not os.path.isfile("/usr/local/bin/user_details.json"):
 		print("Enter user details")
 		
 		data['name'] = input("Username : ")
@@ -55,6 +55,11 @@ if __name__ == "__main__":
 		
 		with open("user_details.json", "w") as fo:
 			json.dump(data, fo)
+		
+		os.system("mv user_details.json /usr/local/bin/")
 
-		# if os.path.isfile("user_details.json"):
-	    #     speed.test_speed()
+	if os.path.isfile("/usr/local/bin/user_details.json"):
+		f=open("/usr/local/bin/user_details.json",'r')
+		data = json.load(f)
+		print("Hey "+data['name']+"!")
+		#     speed.test_speed()

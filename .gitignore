@@ -5,3 +5,4 @@ venv/
 assist
 *~
 assistant/test.py
+user_details.json
