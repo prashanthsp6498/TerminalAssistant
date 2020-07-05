@@ -5,9 +5,10 @@ import random
 
 
 def joke():
-    genre = ['nsfw', 'religious', 'political']
-    url = 'https://sv443.net/jokeapi/category/Programming?blacklistFlags=' + \
-        random.choice(genre)
+    # genre = ['nsfw', 'religious', 'political', 'racist', 'sexist']
+    # url = 'https://sv443.net/jokeapi/category/Programming?blacklistFlags=' + \
+    #     random.choice(genre)
+    url='https://sv443.net/jokeapi/v2/joke/Any'
     try:
         response = requests.get(url)
     except requests.exceptions.RequestException as e:
@@ -19,7 +20,7 @@ def joke():
     data = response.json()
     # print(data.keys())
 
-    print(colorama.Fore.GREEN, "------JOKE------\n\n", colorama.Fore.RESET)
+    print(colorama.Fore.GREEN, "------JOKE------\n", colorama.Fore.RESET)
     if('joke' in data.keys()):
         print(data['joke'])
     else:
