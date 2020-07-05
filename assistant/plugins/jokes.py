@@ -19,7 +19,7 @@ def joke():
     data = response.json()
     # print(data.keys())
 
-    print(colorama.Fore.GREEN,"------JOKE------\n\n", colorama.Fore.RESET)
+    print(colorama.Fore.GREEN, "------JOKE------\n\n", colorama.Fore.RESET)
     if('joke' in data.keys()):
         print(data['joke'])
     else:

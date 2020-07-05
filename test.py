@@ -10,7 +10,7 @@ try:
         print('--run\tTo check standard')
     
     elif sys.argv[1] == '--auto':
-        os.system("autopep8 -i assistant/")
+        os.system("autopep8 -i assistant/*/*.py")
 
     elif sys.argv[1] == '--run':
         os.system("flake8 --max-line-length=90 assistant/")
