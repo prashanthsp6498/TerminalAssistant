@@ -16,6 +16,8 @@ pwd = os.getcwd()
 with open("assist", "w") as fo:
     fo.write("source "+pwd+"/venv/bin/activate\n")
     fo.write("python3 "+pwd+"/assistant/")
-os.system("sudo cp assist /usr/local/bin/")
+os.system("sudo mv assist /usr/local/bin/")
 os.system("sudo chmod +x /usr/local/bin/assist")
-os.system("rm assist")
+
+from assistant import user_details
+user_details.main()

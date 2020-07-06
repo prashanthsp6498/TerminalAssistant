@@ -2,6 +2,7 @@ import os
 import json
 import re
 
+data = {}
 
 def validate_email(email):
     if(bool(re.search(r"^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", email)) is True):
@@ -46,14 +47,16 @@ def validate_city(city):
 
 def main():
     if not os.path.isfile("/usr/local/bin/user_details.json"):
-        print("Enter user details")
+        print("Enter your profile details : ")
 
-        data = {}
+        
         data['name'] = input("Username : ")
         validate_email(input("Enter Email :"))
         validate_dob(input("Enter date of Birth(dd/mm/yyyy) :"))
         validate_city(input("Enter your city name : "))
 
+        data['package_location']=os.getcwd()
+        
         with open("user_details.json", "w") as fo:
             json.dump(data, fo)  # indent=4
 
