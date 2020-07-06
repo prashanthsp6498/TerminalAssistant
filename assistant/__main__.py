@@ -10,4 +10,6 @@ if __name__ == "__main__":
         data = json.load(f)
         print("\nHey "+data['name']+"!\n")
 
-
+        if(sys.argv[1]=='--joke'):
+            from plugins import jokes
+            jokes.joke()
