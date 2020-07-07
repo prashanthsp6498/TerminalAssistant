@@ -52,7 +52,7 @@ def main():
         
         data['name'] = input("Username : ")
         validate_email(input("Enter Email :"))
-        validate_dob(input("Enter date of Birth(dd/mm/yyyy) :"))
+        validate_dob(input("Enter date of Birthday(dd/mm/yyyy) :"))
         validate_city(input("Enter your city name : "))
 
         data['package_location']=os.getcwd()
