@@ -12,7 +12,19 @@ if __name__ == "__main__":
 
         assist_args=[re.sub(r'[[\]]','',i) for i in sys.argv[1:]]
         
-        if(assist_args[0]=='--joke'):
+        if(assist_args[0]=='--features'):
+            from plugins import assist_instructions
+            assist_instructions.features()
+
+        elif(assist_args[0]=='--help'):
+            from plugins import assist_instructions
+            assist_instructions.help()
+        
+        elif(assist_args[0]=='--version'):
+            from plugins import assist_instructions
+            assist_instructions.version()
+
+        elif(assist_args[0]=='--joke'):
             from plugins import jokes
             jokes.joke()
 
