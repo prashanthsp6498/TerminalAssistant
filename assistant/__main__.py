@@ -16,5 +16,22 @@ if __name__ == "__main__":
             from plugins import jokes
             jokes.joke()
 
+        elif(assist_args[0]=='--bitcoin-price'):
+            from plugins import bitcoin_price
+            bitcoin_price.price()
 
+        elif(assist_args[0]=='--quotes'):
+            from plugins import programming_quotes
+            programming_quotes.quotes()
 
+        elif(assist_args[0]=='--random-cat-fact'):
+            from plugins import random_cat_fact
+            random_cat_fact.fact()
+        
+        elif(assist_args[0]=='--check-speed'):
+            os.system("python3 "+data['package_location']+"/assistant/plugins/speedtest.py")
+
+        elif(assist_args[0]=='--forcast'):
+            from plugins import weather_forcast
+            weather_forcast.get_weather()    
+        
