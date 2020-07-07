@@ -10,6 +10,11 @@ if __name__ == "__main__":
         data = json.load(f)
         print("\nHey "+data['name']+"!\n")
 
-        if(sys.argv[1]=='--joke'):
+        assist_args=[re.sub(r'[[\]]','',i) for i in sys.argv[1:]]
+        
+        if(assist_args[0]=='--joke'):
             from plugins import jokes
             jokes.joke()
+
+
+
