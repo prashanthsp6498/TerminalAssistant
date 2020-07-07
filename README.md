@@ -9,7 +9,20 @@
 
 Assist is an MIT licenced Open Source Python Package built specifically for Linux users to stay in touch with the world. The Terminal Assistant is an Assistant which gives you the current news, Weather forecast of your geographical area,The current bitcoin price and many other information which can be customized to your own preference.
 
-  
+### Assist Sample : 
+Here, is a sample feature of Assist features : 
+```
+$ assist --bitcoin-price
+
+Hey kushtej!
+
+TODAY'S BITCOIN RATE : 
+
+United States Dollar - 9,276.0262 Dollars
+Euro - 8,202.7900 Euro
+British Pound Sterling - 7,422.1010 Pound
+```
+
 ## Setup :
 
 Assist version 1.0.0 has been released. Refer [SETUP.md](/TEMPLATES/SETUP.md) to setup the project and enjoy the features of Assist.
