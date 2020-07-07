@@ -44,6 +44,7 @@ if __name__ == "__main__":
             os.system("python3 "+data['package_location']+"/assistant/plugins/speedtest.py")
 
         elif(assist_args[0]=='--forcast'):
-            from plugins import weather_forcast
-            weather_forcast.get_weather()    
+
+            from plugins import forcast
+            forcast.get_weather(data['city']["latitude"],data['city']["longitude"]) 
         
