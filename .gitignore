@@ -4,5 +4,5 @@ venv/
 .vscode/
 assist
 *~
-assistant/test.py
 user_details.json
+assistant/test.py
