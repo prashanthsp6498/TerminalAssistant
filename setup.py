@@ -22,5 +22,5 @@ with open("assist", "w") as fo:
 os.system("sudo mv assist /usr/local/bin/")
 os.system("sudo chmod +x /usr/local/bin/assist")
 
-from assistant import user_details
+from assistant.plugins import user_details
 user_details.main()

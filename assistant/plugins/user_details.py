@@ -46,7 +46,7 @@ def validate_city(city):
 
 
 def main():
-    if not os.path.isfile("/usr/local/bin/user_details.json"):
+    if not os.path.isfile("/usr/local/bin/.user_details.json"):
         print("Enter your profile details : ")
 
         
@@ -57,7 +57,7 @@ def main():
 
         data['package_location']=os.getcwd()
         
-        with open("user_details.json", "w") as fo:
+        with open(".user_details.json", "w") as fo:
             json.dump(data, fo)  # indent=4
 
-        os.system("mv user_details.json /usr/local/bin/")
+        os.system("mv .user_details.json /usr/local/bin/")
