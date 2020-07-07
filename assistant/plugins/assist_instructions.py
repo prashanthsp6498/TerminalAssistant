@@ -4,7 +4,7 @@ def features():
     print('--quotes\tProgramming Quotes to motivate you during Coding')
     print('--cat-fact\tCat facts for your cat :)')
     print('--check-speed\tCheck Internet Speed')
-    print('--bitcoin-price\tThe Current Weather Forcast in your city')
+    print('--forcast\tThe Current Weather Forcast in your city')
     print('--joke\tFunny jokes to clear your mind!\n')
 
 def help():
