@@ -23,5 +23,6 @@ def fact():
     for item in data['all']:
         # print(item['text'])
         text_list.append(item['text'])
-
+    
+    print("Did you Know...\n")
     print(random.choice(text_list))

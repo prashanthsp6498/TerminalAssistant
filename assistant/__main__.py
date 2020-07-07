@@ -24,7 +24,7 @@ if __name__ == "__main__":
             from plugins import programming_quotes
             programming_quotes.quotes()
 
-        elif(assist_args[0]=='--random-cat-fact'):
+        elif(assist_args[0]=='--cat-fact'):
             from plugins import random_cat_fact
             random_cat_fact.fact()
         
