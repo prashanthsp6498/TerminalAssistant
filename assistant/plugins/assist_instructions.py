@@ -16,4 +16,4 @@ def help():
     print("Example : assist --bitcoin-price\n")
 
 def version():
-    print("assist version 1.0.0")
+    print("assist version 1.0.1")

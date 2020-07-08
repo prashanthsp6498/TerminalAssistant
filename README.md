@@ -45,7 +45,7 @@ The Indepth explination of the featues is expalained in the [FEATURES.md](/TEMPL
 
 ## Setup :
 
-Assist version 1.0.0 has been released. Refer [SETUP.md](/TEMPLATES/SETUP.md) to setup the project and enjoy the features of Assist.
+Assist version 1.0.1 has been released. Refer [SETUP.md](/TEMPLATES/SETUP.md) to setup the project and enjoy the features of Assist.
 
 ## Contributing
 
