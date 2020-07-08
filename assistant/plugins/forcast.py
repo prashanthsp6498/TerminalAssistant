@@ -4,8 +4,8 @@ import json
 import random
 
 
-def get_woeid(lat,long):
-    
+def get_woeid(lat, long):
+
     url = 'https://www.metaweather.com/api/location/search/?lattlong=' + \
         str(lat)+','+str(long)+''
     try:
@@ -20,8 +20,8 @@ def get_woeid(lat,long):
     return woeid
 
 
-def get_weather(lat,long):
-    woeid = get_woeid(lat,long)
+def get_weather(lat, long):
+    woeid = get_woeid(lat, long)
 
     from datetime import date
     today = date.today()

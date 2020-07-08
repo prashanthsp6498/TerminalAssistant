@@ -8,12 +8,14 @@ def features():
     print('--joke\tFunny jokes to clear your mind!\n')
 
     print("Refer documentation for further explination with examples")
-    print("Documentation link : ",end="")
+    print("Documentation link : ", end="")
     print("https://github.com/kushtej/Assist/blob/master/TEMPLATES/FEATURES.md\n")
+
 
 def help():
     print("usage : assist <command>")
     print("Example : assist --bitcoin-price\n")
+
 
 def version():
     print("assist version 1.0.1")

@@ -8,7 +8,7 @@ def joke():
     # genre = ['nsfw', 'religious', 'political', 'racist', 'sexist']
     # url = 'https://sv443.net/jokeapi/category/Programming?blacklistFlags=' + \
     #     random.choice(genre)
-    url='https://sv443.net/jokeapi/v2/joke/Any'
+    url = 'https://sv443.net/jokeapi/v2/joke/Any'
     try:
         response = requests.get(url)
     except requests.exceptions.RequestException as e:
