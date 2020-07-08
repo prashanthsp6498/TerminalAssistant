@@ -7,7 +7,7 @@ Follow the following steps to setup the ASSIST package in your LINUX system.
 The Assist Package can be cloned from github using the command 
 `$ git clone https://github.com/kushtej/Assist.git`
 
-<h4>OR</h4>
+<h4 align="center">OR</h4>
 
 Download the latest Version of the package from the following URL :
 [https://github.com/kushtej/Assist/releases/tag/1.0.0](https://github.com/kushtej/Assist/releases/tag/1.0.0)
