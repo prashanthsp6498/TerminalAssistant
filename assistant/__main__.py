@@ -46,7 +46,11 @@ if __name__ == "__main__":
                       "/assistant/plugins/speedtest.py")
 
         elif(assist_args[0] == '--forcast'):
-
             from plugins import forcast
             forcast.get_weather(data['city']["latitude"],
                                 data['city']["longitude"])
+
+        elif(assist_args[0] == '--dictionary'):
+            from plugins import en_dictionary
+            word=input("Enter the Word : ")
+            en_dictionary.meaning(word)
