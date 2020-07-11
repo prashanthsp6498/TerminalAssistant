@@ -2,7 +2,7 @@
 <h1 align="center">ASSIST</h1>
 <h3 align="center">A handy tool for Developers to stay up todate with the world!</h3>
 
-![enter image description here](https://img.shields.io/badge/Contrbutors-Welcome-brightgreen)
+![](https://img.shields.io/badge/Contrbutors-Welcome-brightgreen)
 ![](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Introduction :
@@ -33,12 +33,13 @@ Hey kushtej!
 
 These are the list of all the features provided by Assist : 
 
---bitcoin-price	Check current bitcoin price
---quotes	Programming Quotes to motivate you during Coding
---cat-fact	Cat facts for your cat :)
---check-speed	Check Internet Speed
---forcast	The Current Weather Forcast in your city
---joke	Funny jokes to clear your mind!
+--bitcoin-price         Check current bitcoin price
+--quotes                Programming Quotes to motivate you during Coding
+--cat-fact              Cat facts for your cat :)
+--check-speed           Check Internet Speed
+--dictionary            Check the meaning of the word.
+--forcast               The Current Weather Forcast in your city
+--joke                  Funny jokes to clear your mind!
 ```
 The Indepth explination of the featues is expalained in the [FEATURES.md](/TEMPLATES/FEATURES.md) markdown file. For further explination. Please Refer the file.
 

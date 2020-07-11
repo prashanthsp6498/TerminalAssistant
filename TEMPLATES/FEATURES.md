@@ -10,12 +10,13 @@ Hey kushtej!
 
 These are the list of all the features provided by Assist : 
 
---bitcoin-price	Check current bitcoin price
---quotes	Programming Quotes to motivate you during Coding
---cat-fact	Cat facts for your cat :)
---check-speed	Check Internet Speed
---forcast	The Current Weather Forcast in your city
---joke	Funny jokes to clear your mind!
+--bitcoin-price         Check current bitcoin price
+--quotes                Programming Quotes to motivate you during Coding
+--cat-fact              Cat facts for your cat :)
+--check-speed           Check Internet Speed
+--dictionary            Check the meaning of the word.
+--forcast               The Current Weather Forcast in your city
+--joke                  Funny jokes to clear your mind!
 ```
 ## 1. assist `--forcast`
 
