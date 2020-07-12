@@ -58,6 +58,19 @@ def main():
         data['package_location'] = os.getcwd()
 
         with open(".user_details.json", "w") as fo:
-            json.dump(data, fo)  # indent=4
+            json.dump(data, fo,indent=4)
 
         os.system("mv .user_details.json /usr/local/bin/")
+
+
+
+def currency_setdefault():
+    with open("/usr/local/bin/.user_details.json", "r+") as fo:
+        data = json.load(fo)
+        fo.seek(0)
+        fo.truncate()
+
+        data['currency']=input('Choose One : ')
+        json.dump(data, fo,indent=4)
+        
+    currency()
