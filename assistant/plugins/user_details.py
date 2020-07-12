@@ -65,6 +65,7 @@ def main():
 
 
 def currency_setdefault():
+    from . import currency_exchange
     with open("/usr/local/bin/.user_details.json", "r+") as fo:
         data = json.load(fo)
         fo.seek(0)
@@ -73,4 +74,4 @@ def currency_setdefault():
         data['currency']=input('Choose One : ')
         json.dump(data, fo,indent=4)
         
-    currency()
+    currency_exchange.currency()

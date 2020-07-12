@@ -32,7 +32,6 @@ def currency_exchange(add,base):
     print()    
 
 def currency():
-    from . import currency_exchange
     
     f = open("/usr/local/bin/.user_details.json", 'r')
     user_details = json.load(f)
@@ -40,7 +39,7 @@ def currency():
     if('currency' in user_details):
         base=user_details['currency']
         add='?base='
-        currency_exchange.currency_exchange(add,base)
+        currency_exchange(add,base)
         print("\nTo set Default assist --currency --setdefault\n")
     else:
         add=''
