@@ -56,11 +56,11 @@ if __name__ == "__main__":
             en_dictionary.meaning(word)
         
         if(assist_args[0] == '--currency'):
-            from plugins import user_details
-            user_details.currency()
+            from plugins import currency_exchange
+            currency_exchange.currency()
 
         elif('--currency' and '--setbase' in assist_args ):
             from plugins import user_details
-            user_details.currency_setdefault()
+            user_details.currency_setbase()
         elif('--currency' and '--addcountry' in assist_args ):
             print("hi")   

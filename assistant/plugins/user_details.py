@@ -64,7 +64,7 @@ def main():
 
 
 
-def currency_setdefault():
+def currency_setbase():
     from . import currency_exchange
     with open("/usr/local/bin/.user_details.json", "r+") as fo:
         data = json.load(fo)
