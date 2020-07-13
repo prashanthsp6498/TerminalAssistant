@@ -16,6 +16,12 @@ def currency_exchange(add,base):
         return
 
     data = response.json()
+    return data
+
+
+
+def print_currency_exchange(add,base):
+    data=currency_exchange(add,base)
     print("\nBASE : "+data['base']+"\n")
 
     count = 0
@@ -29,7 +35,7 @@ def currency_exchange(add,base):
             print()
         print(key+" : "+str("{:.2f}".format(value)),end="\t")
         count+=1
-    print()    
+    print()
 
 def currency():
     
@@ -39,11 +45,10 @@ def currency():
     if('currency' in user_details):
         base=user_details['currency']
         add='?base='
-        currency_exchange(add,base)
-        print("\nTo set Default assist --currency --setbase\n")
+        print_currency_exchange(add,base)
+        print("\nTo set Default Currency BASE : assist [--currency] [--setbase]\n")
     else:
-        add=''
-        base=''
-        currency_exchange.currency_exchange(add,base)
+
+        print_currency_exchange('','')
         print("\n\nTo Customise Currency Output, Please set default.")
         print("To set Default assist --currency --setbase\n")

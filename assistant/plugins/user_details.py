@@ -67,11 +67,13 @@ def main():
 def currency_setbase():
     from . import currency_exchange
     with open("/usr/local/bin/.user_details.json", "r+") as fo:
-        data = json.load(fo)
+        user_details = json.load(fo)
         fo.seek(0)
         fo.truncate()
 
-        data['currency']=input('Choose One : ')
-        json.dump(data, fo,indent=4)
+        data=currency_exchange.currency_exchange('','')
+        print(*data['rates'])
+        user_details['currency']=input('Choose One : ')
+        json.dump(user_details, fo,indent=4)
         
     currency_exchange.currency()
