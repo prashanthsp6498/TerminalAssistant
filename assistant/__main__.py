@@ -3,6 +3,7 @@ import json
 import re
 import sys
 from datetime import datetime
+from plugins import *
 
 if __name__ == "__main__":
 
@@ -13,32 +14,25 @@ if __name__ == "__main__":
 
         assist_args = [re.sub(r'[[\]]', '', i) for i in sys.argv[1:]]
         
-        if(assist_args[0] == '--features'):
-            from plugins import assist_instructions
+        if(assist_args[0] == '--features'):         
             assist_instructions.features()
 
-        if(assist_args[0] == '--help'):
-            from plugins import assist_instructions
+        if(assist_args[0] == '--help'):            
             assist_instructions.help()
 
-        if(assist_args[0] == '--version'):
-            from plugins import assist_instructions
+        if(assist_args[0] == '--version'):            
             assist_instructions.version()
 
-        if(assist_args[0] == '--joke'):
-            from plugins import jokes
+        if(assist_args[0] == '--joke'):           
             jokes.joke()
 
-        if(assist_args[0] == '--bitcoin-price'):
-            from plugins import bitcoin_price
+        if(assist_args[0] == '--bitcoin-price'):           
             bitcoin_price.price()
 
         if(assist_args[0] == '--quotes'):
-            from plugins import programming_quotes
             programming_quotes.quotes()
 
         if(assist_args[0] == '--cat-fact'):
-            from plugins import random_cat_fact
             random_cat_fact.fact()
 
         if(assist_args[0] == '--check-speed'):
@@ -46,21 +40,14 @@ if __name__ == "__main__":
                       "/assistant/plugins/speedtest.py")
 
         if(assist_args[0] == '--forcast'):
-            from plugins import forcast
             forcast.get_weather(user_details['city']["latitude"],
                                 user_details['city']["longitude"])
 
         if(assist_args[0] == '--dictionary'):
-            from plugins import en_dictionary
             word=input("Enter the Word : ")
             en_dictionary.meaning(word)
         
         if(assist_args[0] == '--currency'):
-            from plugins import currency_exchange
             currency_exchange.currency()
-
         elif('--currency' and '--setbase' in assist_args ):
-            from plugins import user_details
             user_details.currency_setbase()
-        # elif('--currency' and '--addcountry' in assist_args ):
-        #     print("hi")
