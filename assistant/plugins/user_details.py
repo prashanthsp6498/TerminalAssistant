@@ -71,8 +71,9 @@ def currency_setbase():
         fo.truncate()
         data = currency_exchange.currency_exchange('', '')
         print(*data['rates'])
-        print()
-        user_details['currency'] = input('Choose One : ')
+        base={}
+        base['base']=input("\nChoose one of the above : ").upper()
+        user_details['currency']=base
         json.dump(user_details, fo, indent=4)
 
     currency_exchange.currency()

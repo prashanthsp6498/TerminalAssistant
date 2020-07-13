@@ -62,5 +62,5 @@ if __name__ == "__main__":
         elif('--currency' and '--setbase' in assist_args ):
             from plugins import user_details
             user_details.currency_setbase()
-        elif('--currency' and '--addcountry' in assist_args ):
-            print("hi")
+        # elif('--currency' and '--addcountry' in assist_args ):
+        #     print("hi")

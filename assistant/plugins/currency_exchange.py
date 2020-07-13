@@ -43,13 +43,12 @@ def currency():
     user_details = json.load(f)
 
     if('currency' in user_details):
-        base = user_details['currency']
+        base = user_details['currency']['base']
         add = '?base='
         print_currency_exchange(add, base)
         print(
             "\nTo set Default Currency BASE : assist [--currency] [--setbase]\n")
     else:
-
         print_currency_exchange('', '')
         print("\n\nTo Customise Currency Output, Please set default.")
         print("To set Default assist --currency --setbase\n")
