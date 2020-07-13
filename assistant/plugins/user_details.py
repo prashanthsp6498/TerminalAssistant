@@ -58,10 +58,9 @@ def main():
         data['package_location'] = os.getcwd()
 
         with open(".user_details.json", "w") as fo:
-            json.dump(data, fo,indent=4)
+            json.dump(data, fo, indent=4)
 
         os.system("mv .user_details.json /usr/local/bin/")
-
 
 
 def currency_setbase():
@@ -70,10 +69,10 @@ def currency_setbase():
         user_details = json.load(fo)
         fo.seek(0)
         fo.truncate()
-
-        data=currency_exchange.currency_exchange('','')
+        data = currency_exchange.currency_exchange('', '')
         print(*data['rates'])
-        user_details['currency']=input('Choose One : ')
-        json.dump(user_details, fo,indent=4)
-        
+        print()
+        user_details['currency'] = input('Choose One : ')
+        json.dump(user_details, fo, indent=4)
+
     currency_exchange.currency()

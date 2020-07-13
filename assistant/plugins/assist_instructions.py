@@ -20,6 +20,10 @@ def features():
 def help():
     print("usage : assist <command>")
     print("Example : assist --bitcoin-price\n")
+    print("Refer documentation for further explination with examples")
+    print("Documentation link : ", end="")
+    c.prGreen(
+        "https://github.com/kushtej/Assist/blob/master/TEMPLATES/FEATURES.md\n\n")
 
 
 def version():

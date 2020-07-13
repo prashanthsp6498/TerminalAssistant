@@ -4,7 +4,7 @@ import json
 import random
 
 
-def currency_exchange(add,base):
+def currency_exchange(add, base):
     url = 'https://api.exchangeratesapi.io/latest'+add+base
 
     try:
@@ -19,36 +19,37 @@ def currency_exchange(add,base):
     return data
 
 
-
-def print_currency_exchange(add,base):
-    data=currency_exchange(add,base)
+def print_currency_exchange(add, base):
+    data = currency_exchange(add, base)
     print("\nBASE : "+data['base']+"\n")
 
     count = 0
     f = open("/usr/local/bin/.user_details.json", 'r')
     user_details = json.load(f)
-    
-    for key,value in data['rates'].items():
+
+    for key, value in data['rates'].items():
         if key == data['base']:
             continue
-        if(count % 5==0):
+        if(count % 5 == 0):
             print()
-        print(key+" : "+str("{:.2f}".format(value)),end="\t")
-        count+=1
+        print(key+" : "+str("{:.2f}".format(value)), end="\t")
+        count += 1
     print()
 
+
 def currency():
-    
+
     f = open("/usr/local/bin/.user_details.json", 'r')
     user_details = json.load(f)
-    
+
     if('currency' in user_details):
-        base=user_details['currency']
-        add='?base='
-        print_currency_exchange(add,base)
-        print("\nTo set Default Currency BASE : assist [--currency] [--setbase]\n")
+        base = user_details['currency']
+        add = '?base='
+        print_currency_exchange(add, base)
+        print(
+            "\nTo set Default Currency BASE : assist [--currency] [--setbase]\n")
     else:
 
-        print_currency_exchange('','')
+        print_currency_exchange('', '')
         print("\n\nTo Customise Currency Output, Please set default.")
         print("To set Default assist --currency --setbase\n")
