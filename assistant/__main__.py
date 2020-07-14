@@ -51,4 +51,5 @@ if __name__ == "__main__":
         if(assist_args[0] == '--currency'):
             currency_exchange.currency()
         elif('--currency' and '--setbase' in assist_args):
+            from plugins import user_details
             user_details.currency_setbase()

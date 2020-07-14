@@ -34,6 +34,7 @@ Hey kushtej!
 These are the list of all the features provided by Assist : 
 
 --bitcoin-price         Check current bitcoin price
+--currency              Check current currency exchange of more than 16 countries
 --quotes                Programming Quotes to motivate you during Coding
 --cat-fact              Cat facts for your cat :)
 --check-speed           Check Internet Speed

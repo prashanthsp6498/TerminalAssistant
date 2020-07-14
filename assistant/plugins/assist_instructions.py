@@ -4,6 +4,7 @@ from . import color as c
 def features():
     print("These are the list of all the features provided by Assist : \n")
     print('--bitcoin-price\t\tCheck current bitcoin price')
+    print('--currency\t\tCheck current currency exchange of more than 16 countries')
     print('--quotes\t\tProgramming Quotes to motivate you during Coding')
     print('--cat-fact\t\tCat facts for your cat :)')
     print('--check-speed\t\tCheck Internet Speed')
