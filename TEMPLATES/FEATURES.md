@@ -117,9 +117,9 @@ Hey kushtej!
 
 TODAY'S BITCOIN RATE :
 
-United States Dollar - 9,276.0262 Dollars
-Euro - 8,202.7900 Euro
-British Pound Sterling - 7,422.1010 Pound
+United States Dollar - $ 9,194.9285
+Euro - € 8,028.8369
+British Pound Sterling - £ 7,332.6796
 ```
 ## 4. assist `--quotes`
 

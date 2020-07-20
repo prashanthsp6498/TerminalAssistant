@@ -19,9 +19,9 @@ def price():
     text_list = []
     data = response.json()
     print("TODAY'S BITCOIN RATE : \n\n")
-    print(str(data['bpi']['USD']['description'])+' - ' +
-          str(data['bpi']['USD']['rate'])+' Dollars')
+    print(str(data['bpi']['USD']['description'])+' - $ ' +
+          str(data['bpi']['USD']['rate']))
     print(str(data['bpi']['EUR']['description']) +
-          ' - '+str(data['bpi']['EUR']['rate'])+' Euro')
+          ' - € '+str(data['bpi']['EUR']['rate']))
     print(str(data['bpi']['GBP']['description']) +
-          ' - '+str(data['bpi']['GBP']['rate'])+' Pound')
+          ' - £ '+str(data['bpi']['GBP']['rate']))
