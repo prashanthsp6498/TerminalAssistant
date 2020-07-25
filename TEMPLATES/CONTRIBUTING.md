@@ -24,7 +24,8 @@ $ source venv/bin/activate
 **Step 02 :** Then, The new feature must be added to `/assistant/plugins/` 
 **Step 03 :** Make sure that the code is in the form of a definition which preferably takes arguments.
 **Step 04 :** In `__main__.py` add the feature by importing it from the plugins package.
-**Step 05 :** Make sure to add it in the `assist_instruction.py` file and [FEATURES.md](/FEATURES.md) file.
+**Step 05 :**Follow PEP8 standard for code by running `./test.py`.
+**Step 06 :** Make sure to add it in the `assist_instruction.py` file and [FEATURES.md](/FEATURES.md) file.
 
 
 ## Commit messages
