@@ -46,9 +46,11 @@ def currency():
         base = user_details['currency']['base']
         add = '?base='
         print_currency_exchange(add, base)
+        print("\nCurrent currency BASE : "+str(user_details['currency']['base']))
         print(
-            "\nTo set Default Currency BASE : assist [--currency] [--setbase]\n")
+            "To change Default Currency BASE : assist [--currency] [--setbase]\n")
     else:
         print_currency_exchange('', '')
-        print("\n\nTo Customise Currency Output, Please set default.")
-        print("To set Default assist --currency --setbase\n")
+        print("\nCurrent currency BASE : EUR")
+        print(
+            "To change Default Currency BASE : assist [--currency] [--setbase]\n")
